@@ -1,7 +1,7 @@
 /*....................isEven.......................*/
 
 const isEven = function(number){
-  return number % 2;
+  return Math.abs(number % 2);
 }
 
 /*.............Even Odd filter........................*/
