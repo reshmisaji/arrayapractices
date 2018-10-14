@@ -55,3 +55,14 @@ for(let index in fibonacciLimit){
   assert.deepEqual(fibonacciReverse(fibonacciLimit[index]),fibonacciReversed[index]);
 }
 
+/*................largest and lowest number............................*/
+const largestAndLowest = library.largestAndLowest;
+const lowestNumber = library.lowestNumber;
+const inputs = [[],[0],[1,2],[1,3,2],[3,1,2],[1,2,3]];
+const largestAndLowests = [,0,2,3,3,3];
+const lowestNumbers = [,0,1,1,1,1];
+
+for(let index in inputs){
+  assert.deepEqual(largestAndLowest(inputs[index]).large,largestAndLowests[index]);
+  assert.deepEqual(largestAndLowest(inputs[index]).low,lowestNumbers[index]);
+}

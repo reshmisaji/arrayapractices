@@ -86,3 +86,33 @@ const fibonacciReverse = function(limit){
 }
 
 exports.fibonacciReverse = fibonacciReverse;
+
+/*.............Largesst and lowest number................*/
+const large = function(number,largest){
+  if(number > largest){
+    return number;
+  } else{
+    return largest;
+  }
+}
+
+const low = function(number,lowest){
+  if(number < lowest){
+    return number;
+  }else{
+    return lowest;
+  }
+}
+
+const largestAndLowest = function(numbers){
+  let largest = numbers[0];
+  let lowest = numbers[0];
+
+  for(let number of numbers){
+    largest = large(number,largest);
+    lowest = low(number,lowest);
+  }
+  return {large : largest , low : lowest};
+}
+
+exports.largestAndLowest = largestAndLowest;
