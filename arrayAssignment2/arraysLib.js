@@ -116,3 +116,10 @@ const largestAndLowest = function(numbers){
 }
 
 exports.largestAndLowest = largestAndLowest;
+
+/*...................average of numbers............*/
+const average = function(numbers){
+  return sum(numbers)/numbers.length;
+}
+
+exports.average = average;

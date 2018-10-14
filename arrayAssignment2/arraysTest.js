@@ -66,3 +66,13 @@ for(let index in inputs){
   assert.deepEqual(largestAndLowest(inputs[index]).large,largestAndLowests[index]);
   assert.deepEqual(largestAndLowest(inputs[index]).low,lowestNumbers[index]);
 }
+
+/*..................average of numbers......................*/
+const average = library.average;
+const numbersForAvg = [[0],[1,2],[2,4],[2,4,5]];
+const averages = [0,1.5,3,3.6666666666666665];
+
+for(let index in numbersForAvg){
+  assert.deepEqual(average(numbersForAvg[index]),averages[index]);
+}
+
