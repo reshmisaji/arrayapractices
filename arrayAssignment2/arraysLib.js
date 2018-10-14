@@ -42,3 +42,16 @@ const reverse = function(numbers){
 }
 
 exports.reverse = reverse;
+
+/*...............Second Elements..............*/
+
+const secondElement = function(numbers){
+  let secondElements = [];
+
+  for(let index = 0; index < numbers.length; index += 2){
+    secondElements.push(numbers[index]);
+  }
+  return secondElements;
+}
+
+exports.secondElement = secondElement;
