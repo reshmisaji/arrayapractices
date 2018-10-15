@@ -125,9 +125,22 @@ const average = function(numbers){
 exports.average = average;
 
 /*.............Mapping length...............*/
-const mapLength = function(words){
-  for(let index in words){
-    return words[index].length;
-  }
+const mapLength = function(word){
+  return word.length;
 }
+
 exports.mapLength = mapLength;
+
+/*............odd even count.................*/
+const oddEvenCount = function(numbers){
+  let evenCount = 0;
+  let oddCount = 0;
+
+  for(let index in numbers){
+   oddCount += isEven(numbers[index]);
+  }
+  evenCount = (numbers.length - oddCount);
+  return {odd : oddCount, even : evenCount};
+}
+
+exports.oddEvenCount = oddEvenCount;

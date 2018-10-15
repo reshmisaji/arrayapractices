@@ -85,3 +85,14 @@ for(let index in inputWords){
   assert.deepEqual(mapLength(inputWords[index]),wordLength[index]);
 }
 
+/*..............Even Odd Count.....................*/
+const oddEvenCount = library.oddEvenCount;
+const oddEvenInputs = [[],[0],[1],[1,2],[1,1],[2,4]];
+const oddCounts = [0,0,1,1,2,0];
+const evenCounts = [0,1,0,1,0,2];
+
+for(let index in oddEvenInputs){
+  assert.deepEqual(oddEvenCount(oddEvenInputs[index]).odd,oddCounts[index]);
+  assert.deepEqual(oddEvenCount(oddEvenInputs[index]).even,evenCounts[index]);
+}
+
