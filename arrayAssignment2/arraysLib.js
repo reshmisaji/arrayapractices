@@ -123,3 +123,11 @@ const average = function(numbers){
 }
 
 exports.average = average;
+
+/*.............Mapping length...............*/
+const mapLength = function(words){
+  for(let index in words){
+    return words[index].length;
+  }
+}
+exports.mapLength = mapLength;

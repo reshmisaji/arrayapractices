@@ -76,3 +76,12 @@ for(let index in numbersForAvg){
   assert.deepEqual(average(numbersForAvg[index]),averages[index]);
 }
 
+/*....................mapping word length............*/
+const mapLength = library.mapLength;
+const inputWords = ["","a","ab","a b"];
+const wordLength = [0,1,2,3];
+
+for(let index in inputWords){
+  assert.deepEqual(mapLength(inputWords[index]),wordLength[index]);
+}
+
