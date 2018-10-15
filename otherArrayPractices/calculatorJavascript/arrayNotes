@@ -1,0 +1,14 @@
+/*..............ARRAYS..............*/
+ => Array is a collecton of values in a particular order
+ => Declaration : []
+      [1,2,3,4]
+      number[]
+      numbers[1,2,3,4]
+      names["reshmi","balu","kiran","saranya","sarath"]
+ => Add an element to the end of array
+      numbers.push(4);
+      names.push("malu");
+ => Remove an element from the end of array
+      numbers.pop(numbers.length);
+ => Length of the array
+      numbers.length
