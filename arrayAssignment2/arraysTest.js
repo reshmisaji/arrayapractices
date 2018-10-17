@@ -96,3 +96,15 @@ for(let index in oddEvenInputs){
   assert.deepEqual(oddEvenCount(oddEvenInputs[index]).even,evenCounts[index]);
 }
 
+/*.................count numbers above and below a threshold...............*/
+const aboveBelowThreshold = library.aboveBelowThreshold;
+const numbersToCount = [[0],[1,2],[1,2,3]];
+const threshold = [0,1,2];
+const above = [0,1,1];
+const below = [0,0,1];
+
+for(let index in numbersToCount){
+  assert.deepEqual(aboveBelowThreshold(numbersToCount[index],threshold[index]).above,above[index]);
+  assert.deepEqual(aboveBelowThreshold(numbersToCount[index],threshold[index]).below,below[index]);
+}
+

@@ -144,3 +144,24 @@ const oddEvenCount = function(numbers){
 }
 
 exports.oddEvenCount = oddEvenCount;
+
+/*.....................above below threshold count.................*/
+const isAbove = function(number,threshold){
+  return number>threshold;
+}
+
+const isBelow = function(number,threshold){
+  return number<threshold;
+}
+
+const aboveBelowThreshold = function(numbers,threshold){
+  let aboveCount = 0;
+  let belowCount = 0;
+
+  for(let index in numbers){
+    aboveCount += isAbove(numbers[index],threshold);
+    belowCount += isBelow(numbers[index],threshold);
+  }
+  return {above : aboveCount, below : belowCount}
+}
+exports.aboveBelowThreshold = aboveBelowThreshold;
