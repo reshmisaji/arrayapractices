@@ -164,4 +164,13 @@ const aboveBelowThreshold = function(numbers,threshold){
   }
   return {above : aboveCount, below : belowCount}
 }
+
 exports.aboveBelowThreshold = aboveBelowThreshold;
+
+/*...............reverse Array...................*/
+const reverseArray = function(numbers){
+  let reversedArray = reverse(numbers);
+  return reversedArray;
+}
+
+exports.reverseArray = reverseArray;

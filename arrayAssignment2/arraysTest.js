@@ -28,7 +28,7 @@ for(let index in inputNumbers){
   assert.deepEqual(sum(inputNumbers[index]),requiredSum[index]);
 }
 
-/*.........................Test to reverse of an array.........................*/
+/*.........................Test to reverse numbers.........................*/
 const reverse = library.reverse;
 const numbersToReverse = [[1,2],[0,2]];
 const reverseNumbers = [[2,1],[2,0]];
@@ -108,3 +108,8 @@ for(let index in numbersToCount){
   assert.deepEqual(aboveBelowThreshold(numbersToCount[index],threshold[index]).below,below[index]);
 }
 
+/*................reverse an array.....................*/
+const reverseArray = library.reverseArray;
+for(let index in numbersToReverse){
+  assert.deepEqual(reverse(numbersToReverse[index]),reverseNumbers[index]);
+}
