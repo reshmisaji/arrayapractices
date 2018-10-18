@@ -47,12 +47,11 @@ assert.deepEqual(secondElement([1,2,3]),[1,3]);
 
 /*......................Reverse Fibonacci..........................*/
 const fibonacciReverse = library.fibonacciReverse;
-const fibonacciLimit = [1,2,3,4];
-const fibonacciReversed = [[0],[1,0],[1,1,0],[2,1,1,0]];
 
-for(let index in fibonacciLimit){
-  assert.deepEqual(fibonacciReverse(fibonacciLimit[index]),fibonacciReversed[index]);
-}
+assert.deepEqual(fibonacciReverse(1),[0]);
+assert.deepEqual(fibonacciReverse(2),[1,0]);
+assert.deepEqual(fibonacciReverse(3),[1,1,0]);
+assert.deepEqual(fibonacciReverse(4),[2,1,1,0]);
 
 /*................largest and lowest number............................*/
 const largestAndLowest = library.largestAndLowest;
