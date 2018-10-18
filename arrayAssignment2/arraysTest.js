@@ -55,15 +55,11 @@ assert.deepEqual(fibonacciReverse(4),[2,1,1,0]);
 
 /*................largest and lowest number............................*/
 const largestAndLowest = library.largestAndLowest;
-const lowestNumber = library.lowestNumber;
-const inputs = [[],[0],[1,2],[1,3,2],[3,1,2],[1,2,3]];
-const largestAndLowests = [,0,2,3,3,3];
-const lowestNumbers = [,0,1,1,1,1];
 
-for(let index in inputs){
-  assert.deepEqual(largestAndLowest(inputs[index]).large,largestAndLowests[index]);
-  assert.deepEqual(largestAndLowest(inputs[index]).low,lowestNumbers[index]);
-}
+assert.deepEqual(largestAndLowest([]),{ large: undefined , low: undefined });
+assert.deepEqual(largestAndLowest([0]),{ large: 0 , low: 0 });
+assert.deepEqual(largestAndLowest([1,2]),{ large: 2 , low: 1 });
+assert.deepEqual(largestAndLowest([1,2,3]),{ large: 3 , low: 1 });
 
 /*..................average of numbers......................*/
 const average = library.average;
