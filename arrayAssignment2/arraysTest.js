@@ -34,9 +34,10 @@ const reverse = library.reverse;
 const numbersToReverse = [[1,2],[0,2]];
 const reverseNumbers = [[2,1],[2,0]];
 
-for(let index in numbersToReverse){
-  assert.deepEqual(reverse(numbersToReverse[index]),reverseNumbers[index]);
-}
+assert.deepEqual(reverse([]),[]);
+assert.deepEqual(reverse([1]),[1]);
+assert.deepEqual(reverse([1,2]),[2,1]);
+assert.deepEqual(reverse([2,1]),[1,2]);
 
 /*......................Select every second element from numbers..................*/
 const secondElement = library.secondElement;
