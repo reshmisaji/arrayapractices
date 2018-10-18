@@ -31,8 +31,6 @@ assert.deepEqual(sum([-1,2]),1);
 
 /*.........................Test to reverse numbers.........................*/
 const reverse = library.reverse;
-const numbersToReverse = [[1,2],[0,2]];
-const reverseNumbers = [[2,1],[2,0]];
 
 assert.deepEqual(reverse([]),[]);
 assert.deepEqual(reverse([1]),[1]);
@@ -41,12 +39,11 @@ assert.deepEqual(reverse([2,1]),[1,2]);
 
 /*......................Select every second element from numbers..................*/
 const secondElement = library.secondElement;
-const numbersToFilter = [[],[0],[1,2],[1,2,3]];
-const secondElements = [[],[0],[1],[1,3]];
 
-for(let index in numbersToFilter){
-  assert.deepEqual(secondElement(numbersToFilter[index]),secondElements[index]);
-}
+assert.deepEqual(secondElement([]),[]);
+assert.deepEqual(secondElement([0]),[0]);
+assert.deepEqual(secondElement([1,2]),[1]);
+assert.deepEqual(secondElement([1,2,3]),[1,3]);
 
 /*......................Reverse Fibonacci..........................*/
 const fibonacciReverse = library.fibonacciReverse;
@@ -111,10 +108,10 @@ for(let index in numbersToCount){
 }
 
 /*................reverse an array.....................*/
-const reverseArray = library.reverseArray;
-for(let index in numbersToReverse){
-  assert.deepEqual(reverse(numbersToReverse[index]),reverseNumbers[index]);
-}
+//const reverseArray = library.reverseArray;
+//for(let index in numbersToReverse){
+//  assert.deepEqual(reverse(numbersToReverse[index]),reverseNumbers[index]);
+//}
 
 /*...........index of a number in an array.............*/
 //const indexOfArray = library.indexOfArray;
