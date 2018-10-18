@@ -154,7 +154,7 @@ const isBelow = function(number,threshold){
   return number<threshold;
 }
 
-const aboveBelowThreshold = function(numbers,threshold){
+const countUpDownThreshold = function(numbers,threshold){
   let aboveCount = 0;
   let belowCount = 0;
 
@@ -165,7 +165,7 @@ const aboveBelowThreshold = function(numbers,threshold){
   return {above : aboveCount, below : belowCount}
 }
 
-exports.aboveBelowThreshold = aboveBelowThreshold;
+exports.countUpDownThreshold = countUpDownThreshold;
 
 /*...............reverse Array...................*/
 const reverseArray = function(numbers){

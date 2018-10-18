@@ -2,31 +2,32 @@
 const assert = require ('assert');
 const library = require ('./arraysLib.js');
 
-/*.....................Test to partition even numbers...................*/
+/*.....................Test to partition even and odd numbers...................*/
 const partitionNumbers = library.partitionNumbers;
-const inputsEven = [[],[2],[1],[4,2],[3,2],[2,3],[1,7],[-2],[-1],[-4,-2],[-1,2],[1,-2],[-2,3],[-2,1]];
-const requiredOutputsEven = [[],[2],[],[4,2],[2],[2],[],[-2],[],[-4,-2],[2],[-2],[-2],[-2]];
 
-for(let index in inputsEven){
-  assert.deepEqual(partitionNumbers(inputsEven[index]).even,requiredOutputsEven[index]);
-}
-
-/*................Test to partition odd numbers.............................*/
-const inputsOdd = [[],[0],[1],[1,3],[1,2],[2,1],[2,8],[-2],[-1],[-4,-2],[-1,2],[1,-2],[-2,3],[-2,1]];
-const requiredOutputsOdd = [[],[],[1],[1,3],[1],[1],[],[],[-1],[],[-1],[1],[3],[1]];
-
-for(let index in inputsOdd){
-  assert.deepEqual(partitionNumbers(inputsOdd[index]).odd,requiredOutputsOdd[index]);
-}
+assert.deepEqual(partitionNumbers([]),{ even : [], odd : [] });
+assert.deepEqual(partitionNumbers([2]),{ even : [2], odd : [] });
+assert.deepEqual(partitionNumbers([1]),{ even : [], odd : [1]});
+assert.deepEqual(partitionNumbers([4,2]),{ even : [4,2], odd : [] });
+assert.deepEqual(partitionNumbers([3,2]),{ even : [2], odd : [3] });
+assert.deepEqual(partitionNumbers([2,3]),{ even : [2], odd : [3] });
+assert.deepEqual(partitionNumbers([1,7]),{ even : [], odd : [1,7] });
+assert.deepEqual(partitionNumbers([-2]),{ even : [-2], odd : [] });
+assert.deepEqual(partitionNumbers([-1]),{ even: [], odd: [ -1 ] });
+assert.deepEqual(partitionNumbers([-4,-2]),{ even: [-4,-2], odd: [] });
+assert.deepEqual(partitionNumbers([-1,2]),{ even: [2], odd: [-1] });
+assert.deepEqual(partitionNumbers([1,-2]),{ even: [-2], odd: [1] });
+assert.deepEqual(partitionNumbers([-2,3]),{ even: [-2], odd: [3] });
 
 /*.................Test to find the sum of elements in an array..................*/
 const sum = library.sum;
-const inputNumbers = [[],[1],[1,0],[1,2],[1,-2],[-1,2]];
-const requiredSum = [0,1,1,3,-1,1];
 
-for(let index in inputNumbers){
-  assert.deepEqual(sum(inputNumbers[index]),requiredSum[index]);
-}
+assert.deepEqual(sum([]),0);
+assert.deepEqual(sum([1]),1);
+assert.deepEqual(sum([1,0]),1);
+assert.deepEqual(sum([1,2]),3);
+assert.deepEqual(sum([1,-2]),-1);
+assert.deepEqual(sum([-1,2]),1);
 
 /*.........................Test to reverse numbers.........................*/
 const reverse = library.reverse;
@@ -97,15 +98,15 @@ for(let index in oddEvenInputs){
 }
 
 /*.................count numbers above and below a threshold...............*/
-const aboveBelowThreshold = library.aboveBelowThreshold;
+const countUpDownThreshold = library.countUpDownThreshold;
 const numbersToCount = [[0],[1,2],[1,2,3]];
 const threshold = [0,1,2];
-const above = [0,1,1];
-const below = [0,0,1];
+const aboveCount = [0,1,1];
+const belowCount = [0,0,1];
 
 for(let index in numbersToCount){
-  assert.deepEqual(aboveBelowThreshold(numbersToCount[index],threshold[index]).above,above[index]);
-  assert.deepEqual(aboveBelowThreshold(numbersToCount[index],threshold[index]).below,below[index]);
+  assert.deepEqual(countUpDownThreshold(numbersToCount[index],threshold[index]).above,aboveCount[index]);
+  assert.deepEqual(countUpDownThreshold(numbersToCount[index],threshold[index]).below,belowCount[index]);
 }
 
 /*................reverse an array.....................*/
@@ -113,3 +114,8 @@ const reverseArray = library.reverseArray;
 for(let index in numbersToReverse){
   assert.deepEqual(reverse(numbersToReverse[index]),reverseNumbers[index]);
 }
+
+/*...........index of a number in an array.............*/
+//const indexOfArray = library.indexOfArray;
+//const inputArray = [[0],[1,2]];
+//const indexArray = [0,1];
