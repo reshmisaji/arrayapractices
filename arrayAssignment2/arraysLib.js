@@ -174,3 +174,62 @@ const reverseArray = function(numbers){
 }
 
 exports.reverseArray = reverseArray;
+
+/*..............ascending and descending order...........*/
+const isLarge = function(number,nextNumber){
+  return (number < nextNumber);
+}
+
+const isSmall = function(number,nextNumber){
+  return (number > nextNumber);
+}
+
+const ascendDescendArray  = function(numbers){
+  let ascend = 1;
+  let descend = 1;
+
+  for(let index = 0; index < numbers.length-1; index ++){
+    ascend += isLarge(numbers[index],numbers[index+1]);
+    descend += isSmall(numbers[index],numbers[index+1]);
+  }
+  return { ascending : (ascend == numbers.length), descending : (descend == numbers.length) };
+}
+
+exports.ascendDescendArray = ascendDescendArray;
+
+/*................extract digits of a number............*/
+const ifNumberZero = function(digits,number){
+  if(number == 0){
+    digits.push(0);
+  }
+  return digits;
+}
+const extractDigits = function(number){
+  let digits = [];
+  let numberToExtract = number;
+
+  while(numberToExtract > 0){
+    digits.push(numberToExtract % 10);
+    numberToExtract = Math.floor(numberToExtract / 10);
+  };
+  return (ifNumberZero(digits,number)).reverse();
+}
+
+exports.extractDigits = extractDigits;
+
+///*.............index of an array...............*/
+//const isElement = function(number,element){
+//  return (element == number);
+//}
+//
+//const indexOfArray = function(numbers,element){
+//  let elementIndex = [[],[]];
+// 
+//  for(let index = 0; index < numbers.length; index ++){
+//    let number = numbers[index];
+//    elementIndex[isElement(number,element)].push(index);
+//  }
+//  return elementIndex[1];
+//}
+//
+//exports.indexOfArray = indexOfArray;

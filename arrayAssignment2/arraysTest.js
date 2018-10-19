@@ -102,7 +102,22 @@ assert.deepEqual(reverse([1]),[1]);
 assert.deepEqual(reverse([1,2]),[2,1]);
 assert.deepEqual(reverse([1,2,3]),[3,2,1]);
 
-/*...........index of a number in an array.............*/
+/*............Ascending and descsending order.......*/
+const ascendDescendArray = library.ascendDescendArray;
+ 
+assert.deepEqual(ascendDescendArray([1,2]),{ ascending : true, descending : false });
+assert.deepEqual(ascendDescendArray([3,2]),{ ascending : false, descending : true });
+
+/*....................extract digits...............*/
+const extractDigits = library.extractDigits;
+
+assert.deepEqual(extractDigits(0),[0]);
+assert.deepEqual(extractDigits(120),[1,2,0]);
+assert.deepEqual(extractDigits(12),[1,2]);
+
+
+///*...........index of a number in an array.............*/
 //const indexOfArray = library.indexOfArray;
-//const inputArray = [[0],[1,2]];
-//const indexArray = [0,1];
+//
+//assert.deepEqual(indexOfArray([0],0),1);
+//assert.deepEqual(indexOfArray([1,0,2],0),2);
