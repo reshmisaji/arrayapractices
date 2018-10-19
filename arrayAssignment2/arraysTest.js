@@ -115,9 +115,9 @@ assert.deepEqual(extractDigits(0),[0]);
 assert.deepEqual(extractDigits(120),[1,2,0]);
 assert.deepEqual(extractDigits(12),[1,2]);
 
+/*.................zip..........................*/
+const zipArray = library.zipArray;
 
-///*...........index of a number in an array.............*/
-//const indexOfArray = library.indexOfArray;
-//
-//assert.deepEqual(indexOfArray([0],0),1);
-//assert.deepEqual(indexOfArray([1,0,2],0),2);
+assert.deepEqual(zipArray([0],[0]),[[0,0]]);
+assert.deepEqual(zipArray([1,0],[0,1]),[[1,0],[0,1]]);
+assert.deepEqual(zipArray([1,0,3],[0,2,7]),[[1,0],[0,2],[3,7]]);

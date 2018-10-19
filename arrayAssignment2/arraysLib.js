@@ -204,6 +204,7 @@ const ifNumberZero = function(digits,number){
   }
   return digits;
 }
+
 const extractDigits = function(number){
   let digits = [];
   let numberToExtract = number;
@@ -217,19 +218,14 @@ const extractDigits = function(number){
 
 exports.extractDigits = extractDigits;
 
-///*.............index of an array...............*/
-//const isElement = function(number,element){
-//  return (element == number);
-//}
-//
-//const indexOfArray = function(numbers,element){
-//  let elementIndex = [[],[]];
-// 
-//  for(let index = 0; index < numbers.length; index ++){
-//    let number = numbers[index];
-//    elementIndex[isElement(number,element)].push(index);
-//  }
-//  return elementIndex[1];
-//}
-//
-//exports.indexOfArray = indexOfArray;
+/*.............zip.................*/
+const zipArray = function(firstArray,secondArray){
+  let zipNumbers = [];
+
+  for(let index in firstArray){
+    zipNumbers.push([firstArray[index],secondArray[index]])
+  }
+  return zipNumbers;
+}
+
+exports.zipArray = zipArray;
