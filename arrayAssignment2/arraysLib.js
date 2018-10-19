@@ -221,8 +221,9 @@ exports.extractDigits = extractDigits;
 /*.............zip.................*/
 const zipArray = function(firstArray,secondArray){
   let zipNumbers = [];
+  let arrayLength = Math.min(firstArray.length,secondArray.length);
 
-  for(let index in firstArray){
+  for(let index = 0; index < arrayLength; index ++){
     zipNumbers.push([firstArray[index],secondArray[index]])
   }
   return zipNumbers;
