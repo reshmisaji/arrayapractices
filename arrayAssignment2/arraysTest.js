@@ -70,12 +70,11 @@ assert.deepEqual(average([2,4]),3);
 
 /*....................mapping word length............*/
 const mapLength = library.mapLength;
-const inputWords = ["","a","ab","a b"];
-const wordLength = [0,1,2,3];
 
-for(let index in inputWords){
-  assert.deepEqual(mapLength(inputWords[index]),wordLength[index]);
-}
+assert.deepEqual(mapLength(""),0);
+assert.deepEqual(mapLength("a"),1);
+assert.deepEqual(mapLength("ab"),2);
+assert.deepEqual(mapLength("a b"),3);
 
 /*..............Even Odd Count.....................*/
 const oddEvenCount = library.oddEvenCount;
