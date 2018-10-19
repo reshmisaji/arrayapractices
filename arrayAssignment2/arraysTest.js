@@ -95,10 +95,12 @@ assert.deepEqual(countUpDownThreshold([1,2],1),{ above : 1, below : 0 });
 assert.deepEqual(countUpDownThreshold([1,2,3],2),{ above : 1, below : 1 });
 
 /*................reverse an array.....................*/
-//const reverseArray = library.reverseArray;
-//for(let index in numbersToReverse){
-//  assert.deepEqual(reverse(numbersToReverse[index]),reverseNumbers[index]);
-//}
+const reverseArray = library.reverseArray;
+
+assert.deepEqual(reverse([]),[]);
+assert.deepEqual(reverse([1]),[1]);
+assert.deepEqual(reverse([1,2]),[2,1]);
+assert.deepEqual(reverse([1,2,3]),[3,2,1]);
 
 /*...........index of a number in an array.............*/
 //const indexOfArray = library.indexOfArray;
