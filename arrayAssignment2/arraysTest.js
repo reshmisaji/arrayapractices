@@ -120,4 +120,4 @@ const zipArray = library.zipArray;
 
 assert.deepEqual(zipArray([0],[0]),[[0,0]]);
 assert.deepEqual(zipArray([1,0],[0,1]),[[1,0],[0,1]]);
-assert.deepEqual(zipArray([1,0,3],[0,2,7]),[[1,0],[0,2],[3,7]]);
+assert.deepEqual(zipArray([1,0,3],[0,2,7]),[[1,0],[0,2],[3,7]]);     
