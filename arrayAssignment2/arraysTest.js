@@ -127,3 +127,10 @@ assert.deepEqual(zipArray([2,1,0,3],[0,2,7]),[[2,0],[1,2],[0,7]]);
 const partition = library.partition;
 
 assert.deepEqual(partition([1,2,3,4,2,0],2),[[1,2,2,0],[3,4]]);
+
+/*.................rotate array....................*/
+const rotateArray = library.rotateArray;
+
+assert.deepEqual(rotateArray([0],1),[0]);
+assert.deepEqual(rotateArray([1,0],1),[0,1]);
+assert.deepEqual(rotateArray([1,0,3,4],2),[3,4,1,0]);

@@ -251,3 +251,17 @@ const partition = function(numbers,partitionFrequency){
 }
 
 exports.partition = partition;
+
+/*.............rotate array................*/
+const rotateArray = function(numbers,rotateValue){
+  let rotatedArray = [];
+  for(let index = rotateValue; index < numbers.length; index ++){
+    rotatedArray.push(numbers[index]);
+  }
+  for(let index = 0; index < rotateValue; index ++){
+    rotatedArray.push(numbers[index]);
+  }
+  return rotatedArray;
+}
+
+exports.rotateArray = rotateArray;
