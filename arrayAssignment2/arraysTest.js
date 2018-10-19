@@ -63,12 +63,10 @@ assert.deepEqual(largestAndLowest([1,2,3]),{ large: 3 , low: 1 });
 
 /*..................average of numbers......................*/
 const average = library.average;
-const numbersForAvg = [[0],[1,2],[2,4],[2,4,5]];
-const averages = [0,1.5,3,3.6666666666666665];
 
-for(let index in numbersForAvg){
-  assert.deepEqual(average(numbersForAvg[index]),averages[index]);
-}
+assert.deepEqual(average([0]),0);
+assert.deepEqual(average([1,2]),1.5);
+assert.deepEqual(average([2,4]),3);
 
 /*....................mapping word length............*/
 const mapLength = library.mapLength;
