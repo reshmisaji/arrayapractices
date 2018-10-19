@@ -147,11 +147,19 @@ exports.oddEvenCount = oddEvenCount;
 
 /*.....................above below threshold count.................*/
 const isAbove = function(number,threshold){
-  return number>threshold;
+  if( number>threshold){
+    return 1;
+  }else{
+    return 0;
+  }
 }
 
 const isBelow = function(number,threshold){
-  return number<threshold;
+  if(number<threshold){
+    return 1;
+  }else{
+    return 0;
+  }
 }
 
 const countUpDownThreshold = function(numbers,threshold){
@@ -230,3 +238,16 @@ const zipArray = function(firstArray,secondArray){
 }
 
 exports.zipArray = zipArray;
+
+/*...........partition............*/
+const partition = function(numbers,partitionFrequency){
+  let partition = [[],[]];
+  
+  for(let index in numbers){
+    partition[isAbove(numbers[index],partitionFrequency)].push(numbers[index]);
+  }
+
+  return partition;
+}
+
+exports.partition = partition;
