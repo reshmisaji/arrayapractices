@@ -89,14 +89,10 @@ assert.deepEqual(oddEvenCount([2,4]),{ even : 2, odd : 0 });
 /*.................count numbers above and below a threshold...............*/
 const countUpDownThreshold = library.countUpDownThreshold;
 const numbersToCount = [[0],[1,2],[1,2,3]];
-const threshold = [0,1,2];
-const aboveCount = [0,1,1];
-const belowCount = [0,0,1];
 
-for(let index in numbersToCount){
-  assert.deepEqual(countUpDownThreshold(numbersToCount[index],threshold[index]).above,aboveCount[index]);
-  assert.deepEqual(countUpDownThreshold(numbersToCount[index],threshold[index]).below,belowCount[index]);
-}
+assert.deepEqual(countUpDownThreshold([0],0),{ above : 0, below : 0 });
+assert.deepEqual(countUpDownThreshold([1,2],1),{ above : 1, below : 0 });
+assert.deepEqual(countUpDownThreshold([1,2,3],2),{ above : 1, below : 1 });
 
 /*................reverse an array.....................*/
 //const reverseArray = library.reverseArray;
