@@ -202,3 +202,12 @@ assert.deepEqual(intersectDifferenceArrays([1,1,2],[1]),{ intersect : [1], diffe
 
 console.log("............All tests passed for finding the intersect and difference of arrays.....................");
 
+/*.....................is subset.......................*/
+const isSubset = library.isSubset;
+
+assert.deepEqual(isSubset([1],[1]),true);
+assert.deepEqual(isSubset([1,2],[2,1]),true);
+assert.deepEqual(isSubset([1,2,3],[2,3]),true);
+assert.deepEqual(isSubset([1,2,3],[2,3,4]),false);
+
+console.log("...............All tests passed for isSubset function.............................");

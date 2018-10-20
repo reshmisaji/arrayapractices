@@ -316,8 +316,19 @@ const intersectDifferenceArrays = function(firstSet,secondSet){
       partitionSet[1].push(firstSet[index]);
     }
   }
-  //partitionSet = partitionSet.map(unionArray);
   return { intersect : partitionSet[0], difference : partitionSet[1] };
 }
 
 exports.intersectDifferenceArrays = intersectDifferenceArrays;
+
+/*........................is sub set array.....................*/
+const isSubset = function(mainSet,subSet){
+  let elementCount = 0;
+  
+  for(let element of subSet){
+    elementCount += (mainSet.includes(element));
+  }
+ return (elementCount == subSet.length); 
+}
+
+exports.isSubset = isSubset;
