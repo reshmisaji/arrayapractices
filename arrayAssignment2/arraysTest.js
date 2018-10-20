@@ -183,3 +183,12 @@ assert.deepEqual(uniqueArray([1,1]),[1]);
 assert.deepEqual(uniqueArray([1,2,3,1,2]),[1,2,3]);
 
 console.log("............All tests passed for finding unique numbers from an array....................");
+
+/*...............................union of arrays...............................*/
+const unionArray = library.unionArray;
+
+assert.deepEqual(unionArray([1],[2]),[1,2]);
+assert.deepEqual(unionArray([1,2],[2]),[1,2]);
+assert.deepEqual(unionArray([1,2,3],[2,3,4]),[1,2,3,4]);
+
+console.log("............All tests passed for finding the union array.......................");

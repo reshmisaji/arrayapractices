@@ -246,7 +246,6 @@ const partition = function(numbers,partitionFrequency){
   for(let index in numbers){
     partition[isAbove(numbers[index],partitionFrequency)].push(numbers[index]);
   }
-
   return partition;
 }
 
@@ -294,3 +293,13 @@ const uniqueArray = function(numbers){
 }
 
 exports.uniqueArray = uniqueArray;
+
+/*................union array..................*/
+const unionArray = function(firstSet,secondSet){
+  let unionSet = [];
+  let commonSet = firstSet.concat(secondSet);
+
+  return uniqueArray(commonSet);
+}
+
+exports.unionArray = unionArray;
