@@ -280,3 +280,17 @@ const getIndexOfArray = function(numbers,number){
 
 exports.getIndexOfArray = getIndexOfArray;
 
+/*...................unique array..................*/
+const uniqueArray = function(numbers){
+  let uniqueNumbers = [];
+  uniqueNumbers.push(numbers[0]);
+
+  for(let index = 1; index < numbers.length; index ++){
+    if(!(uniqueNumbers.includes(numbers[index]))){
+      uniqueNumbers.push(numbers[index]);
+    }
+  }
+  return uniqueNumbers;
+}
+
+exports.uniqueArray = uniqueArray;

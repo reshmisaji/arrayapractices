@@ -175,3 +175,11 @@ assert.deepEqual(getIndexOfArray([1,2,1,3,4,5,6],6),6);
 assert.deepEqual(getIndexOfArray([1,2,1,3,4,5,6],7),-1);
 
 console.log("................All tests passed for finding the index of an element of the array............");
+
+/*..........................Unique array .................................*/
+const uniqueArray = library.uniqueArray;
+
+assert.deepEqual(uniqueArray([1,1]),[1]);
+assert.deepEqual(uniqueArray([1,2,3,1,2]),[1,2,3]);
+
+console.log("............All tests passed for finding unique numbers from an array....................");
