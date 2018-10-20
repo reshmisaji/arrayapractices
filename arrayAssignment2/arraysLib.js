@@ -296,10 +296,23 @@ exports.uniqueArray = uniqueArray;
 
 /*................union array..................*/
 const unionArray = function(firstSet,secondSet){
-  let unionSet = [];
   let commonSet = firstSet.concat(secondSet);
 
   return uniqueArray(commonSet);
 }
 
 exports.unionArray = unionArray;
+
+/*..............intersection arary...................*/
+const intersectArrays = function(firstSet,secondSet){
+  let intersectSet = [];
+  
+  for(let index in firstSet){
+    if(secondSet.includes(firstSet[index])){
+      intersectSet.push(firstSet[index]);
+    }
+  }
+  return uniqueArray(intersectSet);
+}
+
+exports.intersectArrays = intersectArrays;
