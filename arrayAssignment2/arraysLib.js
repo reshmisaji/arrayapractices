@@ -265,3 +265,18 @@ const rotateArray = function(numbers,rotateValue){
 }
 
 exports.rotateArray = rotateArray;
+
+/*..................  Index of an element of array.........*/
+const getIndexOfArray = function(numbers,number){
+  let indexOfNumber = -1;
+
+  for(let index = 0; index < numbers.length; index ++){
+    if(numbers[index] == number){
+      return index;
+    }
+  }
+  return indexOfNumber;
+}
+
+exports.getIndexOfArray = getIndexOfArray;
+
