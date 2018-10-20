@@ -194,10 +194,11 @@ assert.deepEqual(unionArray([1,2,3],[2,3,4]),[1,2,3,4]);
 console.log("............All tests passed for finding the union array.......................");
 
 /*................intersection of arrays...........*/
-const intersectArrays = library.intersectArrays;
+const intersectDifferenceArrays = library.intersectDifferenceArrays;
 
-assert.deepEqual(intersectArrays([1],[1]),[1]);
-assert.deepEqual(intersectArrays([1,2],[1]),[1]);
-assert.deepEqual(intersectArrays([1,1,2],[1]),[1]);
+assert.deepEqual(intersectDifferenceArrays([1],[1]),{ intersect : [1], difference : [] });
+assert.deepEqual(intersectDifferenceArrays([1,2],[1]),{ intersect : [1], difference : [2] });
+assert.deepEqual(intersectDifferenceArrays([1,1,2],[1]),{ intersect : [1], difference : [2] });
 
-console.log("............All tests passed for finding the intersect array.....................");
+console.log("............All tests passed for finding the intersect and difference of arrays.....................");
+

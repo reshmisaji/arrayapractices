@@ -304,15 +304,20 @@ const unionArray = function(firstSet,secondSet){
 exports.unionArray = unionArray;
 
 /*..............intersection arary...................*/
-const intersectArrays = function(firstSet,secondSet){
-  let intersectSet = [];
+const intersectDifferenceArrays = function(firstSet,secondSet){
+  let partitionSet = [[],[]];
+  firstSet = uniqueArray(firstSet);
+  secondSet = uniqueArray(secondSet);
   
   for(let index in firstSet){
     if(secondSet.includes(firstSet[index])){
-      intersectSet.push(firstSet[index]);
+      partitionSet[0].push(firstSet[index]);
+    }else{
+      partitionSet[1].push(firstSet[index]);
     }
   }
-  return uniqueArray(intersectSet);
+  //partitionSet = partitionSet.map(unionArray);
+  return { intersect : partitionSet[0], difference : partitionSet[1] };
 }
 
-exports.intersectArrays = intersectArrays;
+exports.intersectDifferenceArrays = intersectDifferenceArrays;
