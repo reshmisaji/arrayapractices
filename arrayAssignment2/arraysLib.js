@@ -1,3 +1,10 @@
+/*..................add............................*/
+const add = function(numbersSum,number){
+  return numbersSum + number;
+}
+
+exports.add = add;
+
 /*....................isEven.......................*/
 const isEven = function(number){
   return Math.abs(number % 2);
@@ -22,7 +29,7 @@ const sum = function(numbers){
   let sumNumbers = 0;
 
   for(let number of numbers){
-    sumNumbers = sumNumbers + number;
+    sumNumbers = add(sumNumbers,number);
   }
   return sumNumbers;
 }
