@@ -3,6 +3,8 @@ const isEven = function(number){
   return Math.abs(number % 2);
 }
 
+exports.isEven = isEven;
+
 /*.............Even Odd filter........................*/
 const partitionNumbers = function(numbers){
   let partition = [[],[]];
